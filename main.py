@@ -12,11 +12,14 @@ bot = telebot.TeleBot(TOKEN_TELEGRAM)
 
 @bot.message_handler(func=lambda message: True)
 def responder(message):
-  try:
-response = model.generate_content(message.text)
-bot.reply_to(message, response.text)
-  except Exception as e:
-bot.reply_to(message, "Hubo un error al procesar tu mensaje.")
+ try:
+ # Estas líneas tienen la sangría necesaria para pertenecer al bloque try
+ response = model.generate_content(message.text)
+ bot.reply_to(message, response.text)
+ except Exception as e:
+ # Esta línea tiene la sangría necesaria para pertenecer al bloque except
+ print(f"Error detectado: {e}")
+ bot.reply_to(message, "Hubo un error al procesar tu mensaje.")
 
 print("El bot está encendido...")
 bot.infinity_polling()
