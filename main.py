@@ -14,8 +14,7 @@ bot = telebot.TeleBot(TOKEN_TELEGRAM)
 True)
 def responder(message):
  try:
-  # Estas líneas DEBEN tener sangría (espacio a la derecha)
-      response =
+    response =
    model.generate_content(message.text)
    bot.reply_to(message, response.text)
    except Exception as e:
