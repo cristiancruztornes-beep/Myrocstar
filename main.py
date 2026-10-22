@@ -13,8 +13,8 @@ bot = telebot.TeleBot(TOKEN_TELEGRAM)
 @bot.message_handler(func=lambda message: 
 True)
 def responder(message):
- try: response =
-   model.generate_content(message.text)
+ try: 
+   response = model.generate_content(message.text)
    bot.reply_to(message, response.text)
    except Exception as e:
    # Estas líneas TAMBIÉN deben tener sangría
