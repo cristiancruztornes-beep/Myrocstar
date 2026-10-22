@@ -16,7 +16,7 @@ def responder(message):
  try: 
    response = model.generate_content(message.text)
    bot.reply_to(message, response.text)
-   except Exception as e:
+ except Exception as e:
    print(f"Error detectado: {e}")
    bot.reply_to(message, "Hubo un error al procesar tu mensaje.")
 
