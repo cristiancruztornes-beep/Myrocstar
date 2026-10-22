@@ -4,7 +4,7 @@ import google.generativeai as genai
 
 # El bot buscará estas llaves en Render
 TOKEN_TELEGRAM = os.getenv('TELEGRAM_TOKEN')
-API_KEY_GEMINI = os.getenv('GEMIMINI_API_KEY')
+API_KEY_GEMINI = os.getenv('GEMINI_API_KEY')
 
 genai.configure(api_key=API_KEY_GEMINI)
 model = genai.GenerativeModel('gemini-pro')
