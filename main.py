@@ -35,8 +35,5 @@ def responder(message):
    print(f"Error detectado: {e}")
    bot.reply_to(message, "Hubo un error al procesar tu mensaje.")
 
-server_thread = Thread(target=run_flask) 
-server_thread.start()
-
 print("El bot está encendido...")
 bot.infinity_polling()
