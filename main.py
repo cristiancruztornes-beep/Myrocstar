@@ -8,7 +8,7 @@ app = Flask('')
 
 @app.route('/') 
 def home():  
- return "
+ return ""
 
 def run_flask():
   port = int(os.environ.get('PORT', 8080))  
