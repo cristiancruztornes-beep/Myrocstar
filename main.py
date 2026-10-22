@@ -7,12 +7,16 @@ from threading import Thread
 app = Flask('')
 
 @app.route('/') 
-def home():  
- return ""
+def health_check():
+ return "Bot is running!", 200
 
 def run_flask():
   port = int(os.environ.get('PORT', 8080))  
   app.run(host='0.0.0.0', port=port)
+
+server_thread = Thread(target=run_flask) 
+server_thread.start()
+
 # El bot buscará estas llaves en Render
 TOKEN_TELEGRAM = os.getenv('TELEGRAM_TOKEN')
 API_KEY_GEMINI = os.getenv('GEMINI_API_KEY')
