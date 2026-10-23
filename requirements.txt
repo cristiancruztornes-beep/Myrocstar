@@ -1,6 +1,0 @@
-python-telegram-bot
-google-genai
-pyTelegramBotAPI
-Flask 
-gunicorn
-
