@@ -22,7 +22,7 @@ TOKEN_TELEGRAM = os.getenv('TELEGRAM_TOKEN')
 API_KEY_GEMINI = os.getenv('GEMINI_API_KEY')
 
 genai.configure(api_key=API_KEY_GEMINI)
-model = genai.GenerativeModel('gemini-2.5-flash')
+model = ('gemini-2.5-flash')
 bot = telebot.TeleBot(TOKEN_TELEGRAM)
 
 @bot.message_handler(func=lambda message: 
