@@ -1,6 +1,6 @@
 python-telegram-bot
-google-generativeai
+google-genai
 pyTelegramBotAPI
 Flask 
 gunicorn
-google-genai
+
